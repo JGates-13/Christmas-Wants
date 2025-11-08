@@ -1,0 +1,61 @@
+body {
+  background-color: black;
+}
+h1 {
+  color: #ffffff;
+  font-size: large;
+}
+p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.rod-button {
+  /* use panel layout from static/style.css; make buttons large and tappable */
+  font-size: 1.25rem;
+  color: #ffffff;
+  background-color: #3d3b3b;
+  border: none;
+  padding: 18px 28px;
+  min-width: 200px;
+  min-height: 56px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.rod-button:hover {
+  background-color: #161616;
+}
+
+/* Reel button: same visual style as .rod-button but anchored to the right */
+/* Reel button shares visual style with rod button; positioning handled by panels */
+.reel-button {
+  font-size: 1.25rem;
+  color: #ffffff;
+  background-color: #3d3b3b;
+  border: none;
+  padding: 18px 28px;
+  min-width: 200px;
+  min-height: 56px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.reel-button:hover { background-color: #161616; }
+
+/* Small-screen adjustments: place buttons inline near the top on narrow viewports */
+@media (max-width: 480px) {
+  /* On small screens ensure buttons become full width and easy to tap */
+  .rod-button, .reel-button {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    padding: 18px 16px;
+    margin: 8px 0;
+    transform: none;
+  }
+}
