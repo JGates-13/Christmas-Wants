@@ -15,7 +15,12 @@ app.use("/static", express.static(path.join(__dirname, "static")));
 
 // Default route -> send public/index.html
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+// Health check for hosting platforms (returns 200)
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
 });
 
 // Catch-all for any unmatched routes (optional)
@@ -24,5 +29,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
