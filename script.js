@@ -15,7 +15,7 @@ app.use("/static", express.static(path.join(__dirname, "static")));
 
 // Default route -> send public/index.html
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Catch-all for any unmatched routes (optional)
