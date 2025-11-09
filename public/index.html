@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jackson's Christmas Wishlist</title>
     <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/nav.css" />
     <style>
       /* Small inline helper so links look like buttons even without custom CSS */
       .btn {
@@ -19,11 +20,26 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1>Jackson's Christmas Wishlist</h1>
+    <header class="top-nav">
+      <a href="/index.html" class="logo">
+        <img src="/static/images/jg-logo.svg" alt="JG Logo">
+      </a>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
-
+    <div class="side-menu">
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/fishing/rod-reel.html">Rod & Reel</a>
+        <a href="/fishing/accessories/line.html">Line & Accessories</a>
+        <a href="/fishing/baits/soft-plastics.html">Soft Plastics</a>
+      </nav>
+    </div>
     <main>
+      <h1>Jackson's Christmas Wishlist</h1>
       <p>Choose a category:</p>
       <nav>
         <ul>
@@ -33,5 +49,6 @@
         </ul>
       </nav>
     </main>
+    <script src="/static/nav.js"></script>
   </body>
 </html>
