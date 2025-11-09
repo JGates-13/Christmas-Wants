@@ -8,6 +8,8 @@
   --nav-bg: #1a1a1a;
   --button-bg: #2d2d2d;
   --button-hover: #404040;
+  --card-bg: #1e1e1e;
+  --card-border: rgba(255, 255, 255, 0.1);
 }
 
 /* Global reset + box sizing */
@@ -79,6 +81,58 @@ p {
 main {
   padding: 2rem 20px;
   min-height: calc(100vh - 60px); /* Account for navbar */
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.content-section {
+  margin: 2rem 0;
+}
+
+/* Button Groups */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.product-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
 }
 .panel {
   flex: 1 1 50%;
