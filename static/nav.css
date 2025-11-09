@@ -4,13 +4,14 @@
     left: 0;
     right: 0;
     height: 60px;
-    background-color: #000;
+    background-color: var(--nav-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -30,14 +31,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0;
+    background: none;
+    border: none;
 }
 
 .hamburger span {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--text-primary);
     transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.hamburger:hover span {
+    background-color: var(--accent-color);
 }
 
 .side-menu {
@@ -46,10 +55,12 @@
     right: -300px;
     width: 300px;
     height: calc(100vh - 60px);
-    background-color: #000;
-    transition: right 0.3s ease;
+    background-color: var(--nav-bg);
+    transition: all 0.3s ease;
     z-index: 999;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
 }
 
 .side-menu.active {
@@ -60,19 +71,22 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .side-menu a {
-    color: #fff;
+    color: var(--text-primary);
     text-decoration: none;
     font-size: 1.1rem;
-    padding: 10px;
-    transition: background-color 0.3s ease;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: var(--button-bg);
 }
 
 .side-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--button-hover);
+    transform: translateX(-4px);
 }
 
 /* Adjust main content to account for top nav */

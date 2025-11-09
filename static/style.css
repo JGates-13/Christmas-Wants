@@ -1,27 +1,84 @@
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent-color: #2196f3;
+  --accent-hover: #1976d2;
+  --nav-bg: #1a1a1a;
+  --button-bg: #2d2d2d;
+  --button-hover: #404040;
+}
+
 /* Global reset + box sizing */
-* { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; }
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body { 
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #000; /* dark background */
-  color: #fff;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 /* Basic typography */
-h1 { color: #ffffff; font-size: 1.5rem; margin: 0 0 1rem 0; }
-p { font-size: 1rem; color: #ffffff; margin: 0 0 1rem 0; }
+h1, h2, h3 { 
+  color: var(--text-primary);
+  margin: 0 0 1rem 0;
+}
 
-/* Split layout used across pages: two panels (left = rod, right = reel). */
-.split-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100vh; /* fill viewport */
-  min-height: 480px;
-  overflow: hidden;
-  position: relative;
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+p { 
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--button-bg);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Container layouts */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+main {
+  padding: 2rem 20px;
+  min-height: calc(100vh - 60px); /* Account for navbar */
 }
 .panel {
   flex: 1 1 50%;

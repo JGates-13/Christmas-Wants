@@ -1,51 +1,50 @@
-body {
-  background-color: black;
-}
-h1 {
-  color: #ffffff;
-  font-size: large;
-}
-p {
-  font-size: 16px;
-  color: #ffffff;
-}
-
-.rod-button {
-  /* use panel layout from static/style.css; make buttons large and tappable */
-  font-size: 1.25rem;
-  color: #ffffff;
-  background-color: #3d3b3b;
-  border: none;
-  padding: 18px 28px;
-  min-width: 200px;
-  min-height: 56px;
-  border-radius: 10px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.rod-button:hover {
-  background-color: #161616;
-}
-
-/* Reel button: same visual style as .rod-button but anchored to the right */
-/* Reel button shares visual style with rod button; positioning handled by panels */
+/* Fishing specific components */
+.rod-button,
 .reel-button {
-  font-size: 1.25rem;
-  color: #ffffff;
-  background-color: #3d3b3b;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  background-color: var(--button-bg);
   border: none;
-  padding: 18px 28px;
+  padding: 16px 24px;
   min-width: 200px;
   min-height: 56px;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin: 8px;
 }
-.reel-button:hover { background-color: #161616; }
+
+.rod-button:hover,
+.reel-button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  color: var(--text-primary);
+}
+
+/* Product cards */
+.product-card {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* List styling */
+.fishing-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.fishing-list li {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
 
 /* Small-screen adjustments: place buttons inline near the top on narrow viewports */
 @media (max-width: 480px) {
